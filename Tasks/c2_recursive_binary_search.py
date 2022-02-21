@@ -25,9 +25,9 @@ def binary_search(elem: int, arr: Sequence, left=None, right=None) -> Optional[i
         return mid
     elif elem < arr[mid]:
         binary_search(elem, arr, left, mid - 1)
-    else:
+    elif elem > arr[mid]:
         binary_search(elem, arr, mid + 1, right)
 
 
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(binary_search(10, l))
+l = [x for x in range(10)]
+print(binary_search(8, l))
